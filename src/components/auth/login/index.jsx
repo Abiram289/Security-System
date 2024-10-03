@@ -12,21 +12,33 @@ const Login = () => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const onSubmit = async (e) => {
-        e.preventDefault()
-        if(!isSigningIn) {
-            setIsSigningIn(true)
-            await doSignInWithEmailAndPassword(email, password)
-            // doSendEmailVerification()
+        e.preventDefault();
+        if (!isSigningIn) {
+            setIsSigningIn(true);
+            try {
+                await doSignInWithEmailAndPassword(email, password);
+                // If sign-in is successful, reset the error message
+                setErrorMessage('');
+            } catch (error) {
+                // Handle the error
+                setErrorMessage(error.message); // Set the error message to display
+            } finally {
+                setIsSigningIn(false); // Reset signing-in state regardless of outcome
+            }
         }
     }
 
-    const onGoogleSignIn = (e) => {
-        e.preventDefault()
+    const onGoogleSignIn = async (e) => {
+        e.preventDefault();
         if (!isSigningIn) {
-            setIsSigningIn(true)
-            doSignInWithGoogle().catch(err => {
-                setIsSigningIn(false)
-            })
+            setIsSigningIn(true);
+            try {
+                await doSignInWithGoogle();
+            } catch (err) {
+                setErrorMessage(err.message); // Set error message if Google sign-in fails
+            } finally {
+                setIsSigningIn(false); // Reset signing-in state regardless of outcome
+            }
         }
     }
 
