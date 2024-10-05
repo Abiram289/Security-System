@@ -1,9 +1,13 @@
+Here’s the updated overview for your Smart Security System project, incorporating the enhancements you’ve described:
+
+---
+
 # Smart Security System
 
 ## Overview
-The Smart Security System is an AI-driven web application designed to enhance home security through facial recognition technology. The system captures images of visitors and utilizes a database of known faces to categorize them as "known" or "unknown." It provides real-time notifications, a live feed of the camera, and automated responses to alerts, ensuring users can monitor their surroundings effectively.
+The Smart Security System is an AI-driven web application designed to enhance home security through facial recognition technology. The system captures images of visitors and utilizes a database of known faces to categorize them as "known" or "unknown." It provides real-time notifications, a live feed of the camera, and automated responses to alerts, ensuring users can monitor their surroundings effectively. 
 
-**Note:** Currently, the face recognition functionality is not operational. All other features are working as expected. IOT features are yet to be added.
+**Note:** Currently, the face recognition functionality is not operational. All other features are working as expected. IoT features are yet to be fully integrated but can be extended to control smart devices for enhanced security.
 
 ## Features
 - **User Authentication**: Secure login and registration using Firebase Authentication.
@@ -18,9 +22,15 @@ The Smart Security System is an AI-driven web application designed to enhance ho
 - **Face Registration**: Users can register known faces with corresponding names for identification.
 - **Real-Time Updates**: Updated interface for monitoring visitors in real time.
 
+## Extended IoT Features
+This system can be extended to integrate seamlessly with IoT home devices. In the event of an intruder detection:
+- The system will change the lights to red, indicating a security breach.
+- A sound buzzer will be activated to alert the household and nearby individuals.
+- All smart locks in the house will automatically engage, securing all entry points.
+
 ## Technologies Used
 - **Frontend**: React.js, Firebase, HTML, CSS
-- **Backend**: Node.js, Express , Firebase for database and storage
+- **Backend**: Node.js, Express, Firebase for database and storage
 - **Machine Learning**: OpenCV 
 - **IoT Integration**: Control smart locks, lights, and buzzers through API calls or direct integration with smart devices.
 
@@ -99,3 +109,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any questions or feedback, please reach out to Abiram via [GitHub](https://github.com/Abiram289) or [Instagram](https://www.instagram.com/abiram_289).
 
 ---
+
+### Additional Notes
+This updated overview emphasizes the integration of IoT features for enhanced security measures, making your Smart Security System more robust and user-friendly. Feel free to modify any section to better fit your project's vision!
