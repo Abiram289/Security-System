@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Smart Security System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+The Smart Security System is an AI-driven web application designed to enhance home security through facial recognition technology. The system captures images of visitors and utilizes a database of known faces to categorize them as "known" or "unknown." It provides real-time notifications, a live feed of the camera, and automated responses to alerts, ensuring users can monitor their surroundings effectively.
 
-## Available Scripts
+**Note:** Currently, the face recognition functionality is not operational. All other features are working as expected. IOT features are yet to be added.
 
-In the project directory, you can run:
+## Features
+- **User Authentication**: Secure login and registration using Firebase Authentication.
+- **Image Capture**: Upload or capture images using a webcam.
+- **Image Storage**: Save images of known faces in Firebase Storage for easy access.
+- **Live Feed**: Access a live video feed from the camera, displaying bounding boxes around faces.
+- **Notifications**: Receive alerts when an unknown face is detected.
+- **Smart Responses**: 
+  - Automatically lock smart doors when an alert is triggered.
+  - Change lights to red to alert neighbors of suspicious activity.
+  - Activate a sound buzzer for immediate notification to the user.
+- **Face Registration**: Users can register known faces with corresponding names for identification.
+- **Real-Time Updates**: Updated interface for monitoring visitors in real time.
 
-### `npm start`
+## Technologies Used
+- **Frontend**: React.js, Firebase, HTML, CSS
+- **Backend**: Node.js, Express , Firebase for database and storage
+- **Machine Learning**: OpenCV 
+- **IoT Integration**: Control smart locks, lights, and buzzers through API calls or direct integration with smart devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+### Prerequisites
+- Node.js (v14 or later)
+- npm (Node Package Manager)
+- Firebase account (for authentication and storage)
+- IoT devices (smart locks, lights, buzzer) with appropriate APIs or SDKs for integration.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Clone the Repository
+```bash
+git clone https://github.com/Abiram289/Security-System.git
+cd Security-System
+```
 
-### `npm test`
+### Install Dependencies
+Navigate to the backend and frontend directories to install necessary dependencies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### For Frontend
+```bash
+cd frontend
+npm install
+```
 
-### `npm run build`
+#### For Backend (if applicable)
+```bash
+cd backend
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Firebase Configuration
+1. Create a new Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+2. Set up Firebase Authentication and enable email/password authentication.
+3. Create a Realtime Database and Storage bucket for image storage.
+4. Copy the configuration details and add them to your Firebase initialization file.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### IoT Device Setup
+Ensure that your IoT devices (smart locks, lights, and buzzer) are configured and accessible via their respective APIs. Integrate their SDKs into your project to enable automated responses.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Application
+#### For Frontend
+```bash
+cd frontend
+npm start
+```
 
-### `npm run eject`
+#### For Backend (if applicable)
+```bash
+cd backend
+node server.js  # or your respective backend start command
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Access the Application
+Open your web browser and navigate to `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Known Issues
+- **Face Recognition**: The face recognition feature is currently not working. Additional implementation is required to integrate OpenCV for this functionality.
+- **Responsive Design**: Some components may not be fully responsive on all screen sizes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Future Enhancements
+- Implement the face recognition functionality using OpenCV.
+- Improve integration with IoT devices for smart responses.
+- Add support for multiple cameras.
+- Improve user interface and experience for easier navigation.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## Acknowledgments
+- [Firebase Documentation](https://firebase.google.com/docs)
+- [OpenCV Documentation](https://docs.opencv.org/)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
+For any questions or feedback, please reach out to Abiram via [GitHub](https://github.com/Abiram289) or [Instagram](https://www.instagram.com/abiram_289).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
